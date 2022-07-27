@@ -1,0 +1,15 @@
+<h2>Это список пользователей</h2>
+
+<ul class="Users">
+
+  <li *ngFor="let user of users$ | async">
+
+    <a [routerLink]="['/user', user.id]">
+
+      <span class="badge">{{ user.id }}</span> {{ user.name }}
+
+    </a>
+
+  </li>
+
+</ul>

@@ -1,0 +1,10 @@
+<h4>Детали пользователя</h4>
+
+<div *ngIf="user$ | async as user">
+
+  <p>Имя: {{ user.name }}</p>
+  <p>Id: {{ user.id }}</p>
+
+  <button (click)="gotoHeroes(user)">Back</button>
+
+</div>
